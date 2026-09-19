@@ -1,0 +1,50 @@
+# [mgr]
+#
+# sort_by = "mtime"
+# sort_reverse = true
+# sort_dir_first = true
+
+
+[opener]
+
+edit = [
+  { run = "nvim %s", block = true, for = "unix", desc = "Open file" },
+  { run = ' wezterm.exe cli spawn -- nvim %s ', orphan = true, block = false, for = "unix", desc = "Open file in a new tab" },
+]
+
+play = [
+  { run = 'gthumb %s', block = true, desc = "Open a gif"},
+]
+
+
+[open]
+
+prepend_rules = [
+  { url = "*.gif", use = "play"}
+]
+
+
+[plugin]
+
+# for this, you should install piper yazi plugin. Run
+# ya pkg add yazi-rs/plugins:piper
+# and install bat
+# brew install bat
+
+prepend_previewers = [
+
+  { url = "*/",  run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"' },
+
+  # { url = "*.py",  run = 'piper -- bat -p --theme="Nord" --color=always "$1"' },
+  # { url = "*.lua", run = 'piper -- bat -p --theme="kanagawa-dragon" --color=always "$1"' },
+  # { url = "*.tex", run = 'piper -- bat -p --theme="kanagawa-dragon" --color=always "$1"' },
+  # { url = "*.toml", run = 'piper -- bat -p --theme="kanagawa" --color=always "$1"' },
+  # { url = "*.fish", run = 'piper -- bat -p --theme="kanagawa-dragon" --color=always "$1"' },
+
+  { url = "*.py",  run = 'piper -- bat -p --theme="Dracula" --color=always "$1"' },
+  { url = "*.lua", run = 'piper -- bat -p --theme="Dracula" --color=always "$1"' },
+  { url = "*.tex", run = 'piper -- bat -p --theme="Dracula" --color=always "$1"' },
+  { url = "*.toml", run = 'piper -- bat -p --theme="Dracula" --color=always "$1"' },
+  { url = "*.fish", run = 'piper -- bat -p --theme="Dracula" --color=always "$1"' },
+]
+

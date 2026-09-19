@@ -1,0 +1,50 @@
+----------------------
+----- Transparent ----
+----------------------
+
+-- Transparent.nvim: Removes the background
+-- URL: https://github.com/xiyaowong/transparent.nvim
+
+return {
+  "xiyaowong/transparent.nvim",
+  config = function()
+    require("transparent").setup({
+      groups = {
+        "Normal",
+        "NormalNC",
+        "BlinkCmpMenu",
+        "EndOfBuffer",
+        "SignColumn",
+        "LineNr",
+        "NonText",
+        "Special",
+        "Identifier",
+        "Comment",
+      },
+      extra_groups = {
+        "Normal",
+        "NormalNC",
+        "Comment",
+        "Constant",
+        "Special",
+        "Identifier",
+        "Statement",
+        "PreProc",
+        "Type",
+        "Underlined",
+        "Todo",
+        "String",
+        "Function",
+        "Conditional",
+        "Repeat",
+        "Operator",
+        "Structure",
+        "LineNr",
+        "NonText",
+        "SignColumn",
+        "CursorLineNr",
+        "EndOfBuffer",
+      }
+    })
+  end
+}

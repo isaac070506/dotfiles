@@ -1,0 +1,70 @@
+{
+  "program": {
+    "prefix": ["program"],
+    "body": [
+      "program ${1:program_name}",
+      "\n\timplicit none",
+      "\t$0\n",
+      "end program"
+    ],
+    "description": "To start a program"
+  },
+  "write": {
+    "prefix": ["write"],
+    "body": ["write(${1:*},${2:*}) $0"],
+    "description": "To insert a simple WRITE"
+  },
+  "read": {
+    "prefix": ["read"],
+    "body": ["read(${1:*},${2:*}) $0"],
+    "description": "To insert a simple READ"
+  },
+  "do": {
+    "prefix": ["do"],
+    "body": [
+      "do ${1:variable} = ${2:first_value}, ${3:second_value}",
+      "\t$0",
+      "end do"
+      ],
+    "description": "To add a DO cicle"
+  },
+  "do while": {
+    "prefix": ["do while"],
+    "body": [
+      "do while (${1:variable} ${2:condition} ${3:value})",
+      "\t$0",
+      "end do"
+      ],
+    "description": "To add a WHILE cicle"
+  },
+  "if": {
+    "prefix": ["if"],
+    "body": [
+      "if (${1:variable} ${2:condition} ${3:value}) then",
+      "\t$0",
+      "end if"
+    ],
+    "description": "To add an IF conditional"
+  },
+  "template": {
+    "prefix": ["template"],
+    "body": [
+    "! Objetivo: Crear un código que ${1}",
+    "!",
+    "! Programador:                     Fecha:",
+    "! =====================            ==========",
+    "! Isaac Martínez Oviedo            ${2:xx/xx/xxxx}"
+      ],
+    "description": "To add a custom beginning"
+  },
+  "subroutine": {
+    "prefix": ["subroutine"],
+    "body": [
+    "subroutine ${1:subroutine_name}(${2:in_variables,out_variables})",
+    "\n\timplicit none",
+    "\t$0\n",
+    "end subroutine"
+    ],
+    "description": "To add a subroutine base"
+  }
+}

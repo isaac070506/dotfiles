@@ -1,0 +1,49 @@
+{
+    "usepackage": {
+        "prefix": ["\\usepackage"],
+        "body": ["\\usepackage{$1}"],
+        "description": "Add an usepackage"
+    },
+    "equation": {
+        "prefix": ["equation"],
+        "body": [
+            "\\begin{equation}",
+            "\t$0",
+            "\\end{equation}"
+        ],
+        "description": "Equation"
+    },
+    "equation*": {
+        "prefix": ["equation*"],
+        "body": [
+            "\\begin{equation*}",
+            "\t$0",
+            "\\end{equation*}"
+        ],
+        "description": "Equation*"
+    },
+    "Align(ed)": {
+        "prefix": ["align"],
+        "body": ["\\begin{align}", "\t$0", "\\end{align}"],
+        "description": "Align(ed)"
+    },
+    "Align*(ed)": {
+        "prefix": ["align*"],
+        "body": ["\\begin{align*}", "\t$0", "\\end{align*}"],
+        "description": "Align*(ed)"
+    },
+    "Progra_biblio": {
+        "prefix": ["progra_biblio"],
+        "body": ["Chapman, S. (2017). \\textit{Fortran for Scientists and Engineers}. Mc. Graw Hill Education."],
+        "description": "To add Capman bibliography"
+    },
+    "Itemize": {
+        "prefix": ["itemize", "\\itemize"],
+        "body": [
+            "\\begin{itemize}",
+            "\t\\item $0",
+            "\\end{itemize}"
+            ],
+        "description": "To add an itemize environment"
+    }
+}

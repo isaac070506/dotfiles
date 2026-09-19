@@ -1,0 +1,13 @@
+{
+  "template": {
+    "prefix": ["template"],
+    "body": [
+    "# Objetivo: Crear un código que ${1}",
+    "#",
+    "# Programador:                     Fecha:",
+    "# =====================            ==========",
+    "# Isaac Martínez Oviedo            ${2:xx/xx/xxxx}"
+      ],
+    "description": "To add a custom beginning"
+  }
+}

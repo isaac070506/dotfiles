@@ -1,0 +1,47 @@
+{
+    "figure": {
+        "prefix": ["figure", "\\figure"],
+        "body": [
+            "\\begin{figure}[$1]",
+            "\t\\includegraphics[width=$2\\textwidth]{$3}",
+            "\\end{figure}"
+        ],
+        "description": "Figure environment"
+    },
+    "includegraphics": {
+        "prefix": ["\\includegraphics"],
+        "body": ["\\includegraphics[width=$1\\textwidth]{$2}"],
+        "description": "Include graphics"
+    },
+    "caption": {
+        "prefix": ["\\caption"],
+        "body": ["\\caption{$1}"],
+        "description": "Caption"
+    },
+    "Table": {
+        "prefix": ["table"],
+        "body": [
+            "\\begin{table}[H]",
+            "\t\\begin{tabular}{${1:colums}}",
+            "\t\t$0",
+            "\t\\end{tabular}",
+            "\\end{table}"
+            ],
+        "description": "To add a table"
+    },
+    "F90Prompt": {
+        "prefix": ["\\f90"],
+        "body": ["\\fcode[codetitle={$1}, label=$2]{${3:path}}"],
+        "description": "To add a F90 listings environment"
+    },
+    "PythonPrompt": {
+        "prefix": ["\\py"],
+        "body": ["\\pycode[codetitle={$1}, label=$2]{${3:path}}"],
+        "description": "To add a python listings environment"
+    },
+    "CodeOutput": {
+        "prefix": ["\\out"],
+        "body": ["\\codeoutput[label=$1]{${2:title}}{${3:path}}"],
+        "description": "description"
+    }
+}
