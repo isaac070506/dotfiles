@@ -13,7 +13,7 @@ return {
   build = "make install_jsregexp",
   config = function()
     require("luasnip.loaders.from_vscode").lazy_load({
-      paths = { "./snippets" }
+      paths = { "/home/isaac/.config/nvim/snippets" },
     })
     require('luasnip').config.set_config({
       update_events = "TextChanged,TextChangedI",

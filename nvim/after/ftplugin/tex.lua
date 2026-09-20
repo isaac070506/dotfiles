@@ -38,3 +38,15 @@ map({ 'n', 'o', 'x' }, '[[', '<Plug>(vimtex-[[)', { desc = 'Jump to the begginng
 ---=== Texpresso maps ===---
 map('n', '<localleader>tx', '<cmd>TeXpresso %<CR>', { desc = 'Open TeXpresso on current file' })
 map('n', '<localleader>tc', '<cmd>TeXpressoClose<CR>', { desc = 'Close TeXpresso' })
+
+--- Este apartado lo tome directamente de Gemini AI, no confiar en exceso que se lo que hace
+-- Desactiva matchparen nativo solo en buffers TeX para máximo rendimiento
+vim.b.matchparen_timeout = 10
+vim.b.matchparen_insert_timeout = 10
+
+-- O si prefieres desactivarlo por completo en TeX:
+vim.g.loaded_matchparen = 1
+
+-- vim.cmd("NoMatchParen")
+vim.g.matchparen_timeout = 5
+vim.g.matchparen_insert_timeout = 5

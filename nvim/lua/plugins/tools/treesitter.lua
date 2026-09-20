@@ -12,5 +12,11 @@ return {
   config = function()
     local ts = require("nvim-treesitter")
     ts.install = { "python" }
+    ts.setup({
+      highlight = {
+        enable = true,
+        disable = { "latex", "tex" },
+      },
+    })
   end
 }

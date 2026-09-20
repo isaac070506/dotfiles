@@ -8,7 +8,19 @@
 return {
   "lervag/vimtex",
   ft = { "tex" },
-  -- lazy = false,
+  lazy = false,
+  --- Este apartado es enteramente generado por Gemini AI, no confiar en que se que hace
+  config = function()
+    -- Desactiva la función vimtex#matchparen que satura el CPU
+    vim.g.vimtex_matchparen_enabled = 0
+
+    -- Reduce el rango de líneas que examina VimTeX hacia arriba y abajo
+    vim.g.vimtex_delim_stopline = 50
+
+    -- (Opcional) Si aún notas tirones, desactiva el ocultamiento automático
+    vim.g.vimtex_syntax_conceal_disable = 1
+  end,
+  ---------------------------------------------------------------------------------------
   init = function()
     vim.g.vimtex_view_forward_search_on_start = 0
     -- vim.g.vimtex_syntax_enabled = 0

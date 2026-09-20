@@ -164,7 +164,7 @@ return {
 
       -- accept with shift space (you can enable both of accept-keymap)
       --------> for this, you need to configure .wezterm.lua or similar because shift space is not valid
-      -- ['<C-y>'] = { "accept", "fallback" },
+      ['<C-y>'] = { "accept", "fallback" },
 
       ['<C-space>'] = { 'cancel', 'hide', 'show', 'fallback' }
 
